@@ -1,0 +1,80 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>${pageName}</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link
+	href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap"
+	rel="stylesheet">
+<style>
+	.title-pagename {
+		text-align: center;
+		transform:translatex(-1%);
+		
+	}
+	.title-main a{
+		text-decoration: none;
+		color:white;
+		
+	}
+	.title-main {
+		padding-left: 10px;
+	}
+	
+	/* 폰트적용 */
+	html {
+		font-family: 'Noto Sans KR', sans-serif;
+	}
+	.menu {
+		width: 500px;
+		margin:0 auto;
+		position: absolute;
+		top:0;
+		right: 10%;
+	}
+	.menu  ul {
+		float:left;
+		display:inline-block;
+		text-align:center;
+		padding:0;
+		margin:0 auto;
+		position: relative;
+		width: 25%;
+		vertical-align:top;
+		
+	}
+	
+	.menu > ul > a{
+		text-decoration: none;
+		color:white;
+
+	}
+	.menu > ul:hover > a{
+		color:red;
+		text-decoration: underline;
+	}
+	
+
+</style>
+<script>
+	function stop_msg(){
+		stop_msg = alert('준비중인 서비스 입니다');
+		return location.reload(true);
+	}
+</script>
+</head>
+<body>
+	<h1 class="title-main"><a href="main">일단은 게임이름</a></h1>
+	<h1 class="title-pagename con">${pageName}</h1>
+	<div class="menu">
+    	<ul><a href="login">로그인</a></ul>
+    	<ul><a href="signup">회원가입</a></ul>
+    	<ul><a href="#" onclick="javascript:stop_msg()">1:1 문의</a></ul>
+    	<ul><a href="#" onclick="javascript:stop_msg()">이미지 다운로드</a></ul>
+    </div>
+	
+	
+	
